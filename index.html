@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online Computer Trading supplies computers, printers, networking equipment and IT accessories in Ethiopia.">
+  <title>Online Computer Trading | IT Solutions in Ethiopia</title>
+  <style>
+    :root{--blue:#1769e0;--navy:#102b52;--pale:#eef5ff;--ink:#18263b;--muted:#65748b;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid #e6edf7}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy);letter-spacing:.2px}
+    .logo{width:43px;height:43px;border-radius:12px;background:var(--blue);color:white;display:grid;place-items:center;font-size:23px}
+    .brand small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:700}
+    nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700} nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:9px;background:var(--blue);color:white;font-weight:700;border:0;cursor:pointer}
+    .btn:hover{background:#0c55bd}.btn-outline{background:white;color:var(--blue);border:1px solid #cbdcf7}
+    .hero{background:linear-gradient(115deg,#f3f8ff 0%,#fff 62%,#e6f1ff 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:44px;padding:82px 0 76px}
+    .eyebrow{color:var(--blue);font-weight:800;font-size:12px;letter-spacing:1.7px;text-transform:uppercase}
+    h1{font-size:clamp(38px,5vw,60px);line-height:1.08;letter-spacing:-1.8px;color:var(--navy);margin:15px 0 20px}
+    .hero p{font-size:18px;color:var(--muted);max-width:560px;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-art{min-height:320px;border-radius:28px;background:linear-gradient(145deg,#1769e0,#0c2b5b);position:relative;display:grid;place-items:center;padding:30px;box-shadow:0 25px 55px #123f7b25}
+    .device{width:78%;max-width:360px;position:relative}.screen{height:205px;border:10px solid #182d4a;border-bottom-width:16px;border-radius:13px;background:linear-gradient(140deg,#e9f4ff,#83b8ff);display:grid;place-items:center;box-shadow:0 8px 0 #091b36}
+    .screen-mark{width:100px;height:100px;border-radius:25px;background:#1769e0;color:white;display:grid;place-items:center;font-size:48px;font-weight:800;box-shadow:0 12px 25px #1769e055}
+    .stand{width:80px;height:18px;background:#b9c9de;margin:auto;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}.base{height:9px;width:130px;background:#e4edf8;border-radius:8px;margin:auto}
+    .floating{position:absolute;background:white;border-radius:14px;padding:13px 16px;box-shadow:0 12px 30px #001b402c;font-size:13px;font-weight:800;color:var(--navy)}
+    .float-one{left:18px;top:35px}.float-two{right:17px;bottom:35px}
+    section{padding:75px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 38px}.section-head h2{font-size:clamp(28px,4vw,39px);line-height:1.15;color:var(--navy);margin:9px 0 12px}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{border:1px solid #e3ebf6;border-radius:17px;padding:24px 20px;background:white;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px #102b5212}
+    .card-icon{width:54px;height:54px;border-radius:14px;background:var(--pale);display:grid;place-items:center;font-size:27px;margin-bottom:18px}.card h3{font-size:18px;margin:0 0 8px;color:var(--navy)}.card p{color:var(--muted);font-size:14px;margin:0 0 15px}.text-link{color:var(--blue);font-weight:800;font-size:14px}
+    
+    .catalog{background:#f8fbff}.catalog-tools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:-12px 0 28px}
+    .filter-btn{border:1px solid #d6e3f5;background:#fff;color:var(--navy);padding:9px 15px;border-radius:999px;font-weight:700;cursor:pointer}
+    .filter-btn.active,.filter-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .catalog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product-card{border:1px solid #e1eaf6;background:#fff;border-radius:16px;overflow:hidden;transition:.2s}
+    .product-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px #102b5212}
+    .product-card img{width:100%;height:170px;object-fit:cover;background:#eef4fc;display:block}
+    .product-info{padding:16px}.product-info h3{margin:0 0 6px;color:var(--navy);font-size:16px}
+    .product-info p{font-size:13px;color:var(--muted);margin:0 0 12px}
+    .product-info .text-link{display:inline-block}
+    .catalog-note{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
+    .about{background:#f6f9fe}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.about-panel{background:var(--navy);border-radius:22px;color:white;padding:35px}.about-panel h3{font-size:25px;line-height:1.2;margin:0 0 12px}.about-panel p{color:#d4e1f5}.about-copy h2{font-size:36px;line-height:1.15;color:var(--navy);margin:10px 0 18px}.about-copy p{color:var(--muted)}.checks{display:grid;gap:10px;margin-top:20px}.checks span:before{content:"✓";color:var(--blue);font-weight:900;margin-right:10px}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact-card{border:1px solid #e2eaf5;border-radius:18px;padding:27px}.contact-card h3{color:var(--navy);margin:0 0 8px}.contact-card p{color:var(--muted);margin:0 0 18px}.detail{display:flex;gap:13px;align-items:flex-start;margin:17px 0}.detail b{display:block;color:var(--navy)}.detail span{color:var(--muted);font-size:14px}.detail-icon{width:42px;height:42px;flex:0 0 42px;background:var(--pale);border-radius:12px;display:grid;place-items:center}
+    .notice{font-size:13px;color:#66758a;background:#f4f7fb;padding:12px 14px;border-radius:9px;margin-top:20px}
+    footer{background:#0d2343;color:white;padding:28px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-row small{color:#c0cee2}
+    @media(max-width:850px){nav{gap:13px}.hero-grid{gap:24px;padding:58px 0}.cards{grid-template-columns:repeat(2,1fr)}.catalog-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:25px}}
+    @media(max-width:620px){.nav{padding:12px 0;align-items:flex-start}.brand{font-size:13px}.logo{width:38px;height:38px}nav{display:none}.hero-grid,.about-grid,.contact-wrap{grid-template-columns:1fr}.hero-grid{padding:50px 0}.hero-art{min-height:270px}.screen{height:170px}.float-one{left:10px;top:18px}.float-two{right:10px;bottom:18px}section{padding:55px 0}.cards{gap:12px}.catalog-grid{gap:12px}.product-card img{height:125px}.product-info{padding:12px}.card{padding:18px 15px}.card h3{font-size:16px}.about-panel{padding:26px}.about-copy h2{font-size:30px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">⌘</span><span>ONLINE COMPUTER<small>TRADING · IT SOLUTIONS</small></span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="#contact">Contact Us</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div><div class="eyebrow">Your trusted IT partner</div><h1>Technology that keeps your business moving.</h1>
+        <p>Online Computer Trading supplies computers, printers, networking equipment and IT accessories for offices and businesses across Ethiopia.</p>
+        <div class="actions"><a class="btn" href="#products">Explore Products&nbsp; →</a><a class="btn btn-outline" href="#contact">Talk to Our Team</a></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a desktop computer"><div class="floating float-one">Reliable IT equipment</div><div class="device"><div class="screen"><div class="screen-mark">OCT</div></div><div class="stand"></div><div class="base"></div></div><div class="floating float-two">Solutions for your office</div></div>
+    </div>
+  </section>
+  <section id="products">
+    <div class="container"><div class="section-head"><div class="eyebrow">What we offer</div><h2>Products for your workplace</h2><p>Explore our main product categories. Contact us for availability, specifications and a quotation.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">💻</div><h3>Computers & Laptops</h3><p>Desktop computers, laptops and business computing equipment.</p><a class="text-link category-jump" href="#catalog" data-filter="computers">View products →</a></article>
+        <article class="card"><div class="card-icon">🖨️</div><h3>Printers & Copiers</h3><p>Office printers, multifunction devices and printing supplies.</p><a class="text-link category-jump" href="#catalog" data-filter="printers">View products →</a></article>
+        <article class="card"><div class="card-icon">📶</div><h3>Networking Equipment</h3><p>Routers, switches and connectivity equipment for offices.</p><a class="text-link category-jump" href="#catalog" data-filter="networking">View products →</a></article>
+        <article class="card"><div class="card-icon">⌨️</div><h3>IT Accessories</h3><p>Keyboards, mice, cables and everyday computer accessories.</p><a class="text-link category-jump" href="#catalog" data-filter="accessories">View products →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Product catalogue</div><h2>Explore our equipment</h2><p>Browse product types and contact us for models, current stock, specifications and quotations.</p></div>
+      <div class="catalog-tools" role="group" aria-label="Filter products">
+        <button class="filter-btn active" type="button" data-catalog-filter="all">All products</button>
+        <button class="filter-btn" type="button" data-catalog-filter="computers">Computers & laptops</button>
+        <button class="filter-btn" type="button" data-catalog-filter="printers">Printers & copiers</button>
+        <button class="filter-btn" type="button" data-catalog-filter="networking">Networking</button>
+        <button class="filter-btn" type="button" data-catalog-filter="accessories">IT accessories</button>
+      </div>
+      <div class="catalog-grid">
+        <article class="product-card" data-category="computers"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80" alt="Laptop computer"><div class="product-info"><h3>Laptop Computers</h3><p>Business and everyday laptops.</p><a class="text-link product-contact" href="#contact" data-product="laptop computers">Ask for details →</a></div></article>
+        <article class="product-card" data-category="computers"><img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=700&q=80" alt="Desktop computer setup"><div class="product-info"><h3>Desktop Computers</h3><p>Desktop PCs for office work.</p><a class="text-link product-contact" href="#contact" data-product="desktop computers">Ask for details →</a></div></article>
+        <article class="product-card" data-category="computers"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=80" alt="Computer hardware"><div class="product-info"><h3>Computer Components</h3><p>Selected computer hardware and parts.</p><a class="text-link product-contact" href="#contact" data-product="computer components">Ask for details →</a></div></article>
+        <article class="product-card" data-category="printers"><img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=700&q=80" alt="Office printer"><div class="product-info"><h3>Office Printers</h3><p>Printers for home and business use.</p><a class="text-link product-contact" href="#contact" data-product="office printers">Ask for details →</a></div></article>
+        <article class="product-card" data-category="printers"><img src="https://images.unsplash.com/photo-1563770660941-10a63607739e?auto=format&fit=crop&w=700&q=80" alt="Office printing equipment"><div class="product-info"><h3>Multifunction Printers</h3><p>Print, scan and copy equipment.</p><a class="text-link product-contact" href="#contact" data-product="multifunction printers">Ask for details →</a></div></article>
+        <article class="product-card" data-category="printers"><img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=80" alt="Printer supplies"><div class="product-info"><h3>Printing Supplies</h3><p>Ask about toner, ink and supplies.</p><a class="text-link product-contact" href="#contact" data-product="printing supplies">Ask for details →</a></div></article>
+        <article class="product-card" data-category="networking"><img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=700&q=80" alt="Network router"><div class="product-info"><h3>Routers & Wi-Fi</h3><p>Wireless connectivity for offices.</p><a class="text-link product-contact" href="#contact" data-product="routers and Wi-Fi equipment">Ask for details →</a></div></article>
+        <article class="product-card" data-category="networking"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80" alt="Network equipment"><div class="product-info"><h3>Network Equipment</h3><p>Switches and connectivity equipment.</p><a class="text-link product-contact" href="#contact" data-product="network equipment">Ask for details →</a></div></article>
+        <article class="product-card" data-category="networking"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80" alt="Networking cables"><div class="product-info"><h3>Network Cables</h3><p>Cables and wired networking items.</p><a class="text-link product-contact" href="#contact" data-product="network cables">Ask for details →</a></div></article>
+        <article class="product-card" data-category="accessories"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=80" alt="Computer keyboard and mouse"><div class="product-info"><h3>Keyboards & Mice</h3><p>Everyday input devices and accessories.</p><a class="text-link product-contact" href="#contact" data-product="keyboards and mice">Ask for details →</a></div></article>
+        <article class="product-card" data-category="accessories"><img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=700&q=80" alt="Computer accessories"><div class="product-info"><h3>Computer Accessories</h3><p>Useful accessories for computers.</p><a class="text-link product-contact" href="#contact" data-product="computer accessories">Ask for details →</a></div></article>
+        <article class="product-card" data-category="accessories"><img src="https://images.unsplash.com/photo-1601524909162-ae8725290836?auto=format&fit=crop&w=700&q=80" alt="Computer cables and adapters"><div class="product-info"><h3>Cables & Adapters</h3><p>Common cables, adapters and add-ons.</p><a class="text-link product-contact" href="#contact" data-product="cables and adapters">Ask for details →</a></div></article>
+      </div>
+      <p class="catalog-note">Product photos are illustrative. Please contact us to confirm exact models, availability and prices.</p>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-panel"><div style="font-size:34px;margin-bottom:12px">◎</div><h3>Helping businesses find the right technology.</h3><p>We aim to make sourcing office technology straightforward, with clear product information and helpful customer service.</p></div>
+      <div class="about-copy"><div class="eyebrow">About our company</div><h2>Your partner for office technology.</h2><p>Online Computer Trading is an Ethiopian computer and IT equipment trading business. We help offices and organizations find the technology they need for their day-to-day work.</p><div class="checks"><span>Computers and office equipment</span><span>Networking products and accessories</span><span>Product inquiries and quotation requests</span><span>Serving customers across Ethiopia</span></div></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container"><div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's talk about what you need.</h2><p>Contact our office for product details, current availability or a quotation.</p></div>
+      <div class="contact-wrap">
+        <div class="contact-card"><h3>Contact information</h3><p>Reach Online Computer Trading using the official contact details below.</p>
+          <div class="detail"><div class="detail-icon">☎</div><div><b>Phone</b><a id="phoneLink" href="tel:+251911228640"><span id="phoneText">+251911228640</span></a></div></div>
+          <div class="detail"><div class="detail-icon">⌖</div><div><b>Office location</b><span id="addressText">Bole, Woreda 02, Addis Ababa, Ethiopia — Friendship Mall, FF116</span></div></div>
+          <div class="detail"><div class="detail-icon">◷</div><div><b>Business hours</b><span>PLACEHOLDER: Add your usual working hours</span></div></div>
+          <div class="notice">Before publishing, replace the clearly marked business-hours and email placeholders with your official details.</div>
+        </div>
+        <div class="contact-card"><h3>Need a product or quotation?</h3><p>Send us a message and tell us what equipment you are looking for.</p>
+          <a class="btn" id="whatsappBtn" href="#" target="_blank" rel="noopener">✆&nbsp; Contact us on WhatsApp</a>
+          <div style="height:15px"></div><a class="btn btn-outline" href="mailto:online.computer@yahoo.com" id="emailBtn">✉&nbsp; Email our office</a>
+          <p style="font-size:13px;margin-top:22px">Tip: For faster service, include the product name, model and quantity in your inquiry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-row"><div class="brand" style="color:white"><span class="logo">⌘</span><span>ONLINE COMPUTER<small style="color:#c0cee2">TRADING · IT SOLUTIONS</small></span></div><small>© <span id="year"></span> Online Computer Trading. All rights reserved.</small></div></footer>
+<script>
+  /*
+   * WEBSITE SETUP: Edit the values below before publishing.
+   * WhatsApp number must include country code and digits only, without +, spaces or dashes.
+   * Example Ethiopian number format: 2519XXXXXXXX (replace with your real number).
+   */
+  const BUSINESS = {
+    phoneDisplay: "+251911228640",
+    phoneLink: "+251911228640",
+    whatsappNumber: "251911228638",
+    address: "Bole, Woreda 02, Addis Ababa, Ethiopia — Friendship Mall, FF116",
+    email: "online.computer@yahoo.com"
+  };
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("phoneText").textContent = BUSINESS.phoneDisplay;
+  document.getElementById("phoneLink").href = "tel:" + BUSINESS.phoneLink;
+  document.getElementById("addressText").textContent = BUSINESS.address;
+  const wa = document.getElementById("whatsappBtn");
+  if (BUSINESS.whatsappNumber) {
+    wa.href = "https://wa.me/" + BUSINESS.whatsappNumber;
+  } else {
+    wa.href = "https://wa.me/?text=" + encodeURIComponent("Hello Online Computer Trading, I would like to ask about your products.");
+  }
+  const emailBtn = document.getElementById("emailBtn");
+  emailBtn.href = "mailto:" + BUSINESS.email;
+  emailBtn.textContent = "✉  " + BUSINESS.email;
+  function showCatalog(category) {
+    document.querySelectorAll(".product-card").forEach(card => {
+      card.hidden = category !== "all" && card.dataset.category !== category;
+    });
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.catalogFilter === category);
+    });
+  }
+  document.querySelectorAll("[data-catalog-filter]").forEach(btn => {
+    btn.addEventListener("click", () => showCatalog(btn.dataset.catalogFilter));
+  });
+  document.querySelectorAll(".category-jump").forEach(link => {
+    link.addEventListener("click", () => showCatalog(link.dataset.filter));
+  });
+  document.querySelectorAll(".product-contact").forEach(link => link.addEventListener("click", () => {
+    const message = "Hello Online Computer Trading, I would like to ask about " + link.dataset.product + ".";
+    if (BUSINESS.whatsappNumber) link.href = "https://wa.me/" + BUSINESS.whatsappNumber + "?text=" + encodeURIComponent(message);
+  }));
+</script>
+</body>
+</html>
